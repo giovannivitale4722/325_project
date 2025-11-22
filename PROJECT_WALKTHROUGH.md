@@ -204,6 +204,24 @@ Before building the models, we verified all key assumptions for logistic regress
 - Tech Support reduces churn
 - Higher Monthly Charges increase churn
 
+### Model 3: Decision Tree Classifier
+**Purpose**: To provide a non-linear classification model and fulfill the requirement of applying at least 3 modeling methods.
+
+**Configuration**:
+- Max Depth: 5 (to prevent overfitting)
+- Split: 80% Train, 20% Test
+
+**Results**:
+- **Accuracy**: 78.82%
+- **Precision (Churn=0)**: 0.82
+- **Recall (Churn=0)**: 0.91
+- **Precision (Churn=1)**: 0.64
+- **Recall (Churn=1)**: 0.46
+
+**Key Findings**:
+- The model achieves ~79% accuracy, which is comparable to the logistic regression models.
+- It identifies key predictors similar to the logistic regression (Contract, Charges, Tenure).
+
 ---
 
 ## Hypothesis Testing
@@ -420,6 +438,7 @@ The full model significantly improves churn prediction. At least one of the addi
 2. **multiple_logistic_regression_hypothesis_test.ipynb**: Hypothesis testing and analysis
 3. **telco_customer_churn_cleaned.csv**: Cleaned dataset ready for analysis
 4. **PROJECT_WALKTHROUGH.md**: This comprehensive walkthrough document
+5. **decision_tree_model.ipynb**: Decision Tree Classifier implementation
 
 ---
 
@@ -431,10 +450,11 @@ The full model significantly improves churn prediction. At least one of the addi
 - matplotlib & seaborn: Visualizations
 - scipy: Statistical tests
 - statsmodels: Logistic regression modeling
-- sklearn: Data preprocessing
+- sklearn: Data preprocessing and Decision Tree
 
 ### Statistical Methods
 - Logistic Regression
+- Decision Tree Classifier
 - Likelihood Ratio Test
 - Variance Inflation Factor (VIF)
 - Odds Ratio interpretation
